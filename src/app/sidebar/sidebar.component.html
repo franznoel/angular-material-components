@@ -1,0 +1,10 @@
+<mat-drawer-container class="container">
+  <mat-drawer mode="side" opened>
+    <mat-action-list class="sidenav">
+        <button mat-list-item *ngFor="let link of links">{{link.value}}</button>
+    </mat-action-list>
+  </mat-drawer>
+  <mat-drawer-content>
+    <router-outlet></router-outlet>
+  </mat-drawer-content>
+</mat-drawer-container>
