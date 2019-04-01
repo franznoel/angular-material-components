@@ -1,0 +1,19 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div id="main">
+  <mat-toolbar>
+    <!-- Title -->
+    <span>{{title}}</span>
+
+    <!-- Spacer -->
+    <span class="spacer"></span>
+
+    <!-- Theme drop down -->
+    <button mat-button mat-raised-button [matMenuTriggerFor]="themes">Themes</button>
+    <mat-menu #themes="matMenu">
+      <button mat-menu-item (click)="onSetTheme('light-theme')">Light Theme</button>
+      <button mat-menu-item (click)="onSetTheme('dark-theme')">Dark Theme</button>
+    </mat-menu>
+
+  </mat-toolbar>
+  <router-outlet></router-outlet>
+</div>
